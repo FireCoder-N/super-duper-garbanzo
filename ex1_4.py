@@ -15,7 +15,7 @@ while True:
         if "Set-Cookie" in headers.keys():
             print("Website uses the following cookies:")
             for cookie in cookies:
-                print("\t", cookie, cookie.expires)
+                print("\t", cookie, "expires in", cookie.expires)
                 
     except requests.exceptions.MissingSchema:
         print("Invalid url")
